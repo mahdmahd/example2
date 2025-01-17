@@ -1,36 +1,30 @@
 +++
-authors = ["Lone Coder"]
-title = "Math Typesetting"
-date = "2023-07-10"
-description = "A brief guide to setup KaTeX"
+authors = ["Mehdi Khadem"]
+title = "How to Build a Hugo Site"
+date = "2025-01-17"
+description = "An Instruction to Build a simple Hugo site"
 math = true
 tags = [
     "hugo",
-    "markdown",
-    "css",
-    "html",
+    "site"
 ]
 categories = [
-    "theme demo",
-    "syntax",
+    "instruction",
+    "site"
 ]
 series = ["Theme Demo"]
 +++
 
-Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.
+This article offers a instruction that can be used in to build a Hugo Site.
 
 <!--more-->
+## Step 1 : Install Hugo
 
-In this example we will be using [KaTeX](https://katex.org/)
-
--   Create a partial under `/layouts/partials/math.html`
--   Within this partial reference the [Auto-render Extension](https://katex.org/docs/autorender.html) or host these scripts locally.
--   Include the partial in your templates like so:
+first you need to download hugo from the official website. you can download it from [here](https://github.com/gohugoio/hugo/releases/latest) and then you can simply on windows run following command to create new site:
 
 ```bash
-{{ if or .Params.math .Site.Params.math }}
-{{ partial "math.html" . }}
-{{ end }}
+.\hugo.exe new site quickstart
+cd quickstart
 ```
 
 -   To enable KaTeX globally set the parameter `math` to `true` in a project's configuration
